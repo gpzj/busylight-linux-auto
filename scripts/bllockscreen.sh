@@ -1,5 +1,6 @@
 #!/bin/bash
 # Script for monitoring lock/unlock screen of Gnome session
+# Could utilize this? /bin/bash -c "gdbus monitor -y -d org.freedesktop.login1 | grep LockedHint" 
 dbus-monitor --session "type='signal',interface='org.gnome.ScreenSaver'" |
   while read x; do
     case "$x" in 
