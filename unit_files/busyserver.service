@@ -1,0 +1,13 @@
+[Unit]
+Description=This is a service to run the BusyServe http service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/
+ExecStart=busyserve -D
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
