@@ -1,0 +1,11 @@
+[Unit]
+Description=Service to change BusyLight depending on lockscreen status.
+After=network.target
+
+[Service]
+ExecStart=/home/justin/.bash_alias_scripts.d/busylight-lockscreen.sh
+User=justin
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
